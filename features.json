@@ -1,0 +1,114 @@
+[
+    {
+        "params": {
+            "q": "{!dismax qf=name longDescription details shortDescription features albumTitle artistName albumLabel description}${text}"
+        }, 
+        "name": "tfidf_text", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=name pf2=name}${text}"
+        }, 
+        "name": "tfidf_name", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=longDescription pf2=longDescription}${text}"
+        }, 
+        "name": "tfidf_longDescription", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=shortDescription pf2=shortDescription}${text}"
+        }, 
+        "name": "tfidf_shortDescription", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=features pf2=features}${text}"
+        }, 
+        "name": "tfidf_features_t", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=categoryNames pf2=categoryNames}${text}"
+        }, 
+        "name": "tfidf_categoryNames_t", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "q": "{!dismax qf=previous_click_queries pf2=previous_click_queries}${text}"
+        }, 
+        "name": "tfidf_previous_click_queries", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.SolrFeature"
+    }, 
+    {
+        "params": {
+            "field": "salesRankLongTerm"
+        }, 
+        "name": "salesRankLongTerm", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "salesRankMediumTerm"
+        }, 
+        "name": "salesRankMediumTerm", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "salesRankShortTerm"
+        }, 
+        "name": "salesRankShortTerm", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "customerReviewAverage"
+        }, 
+        "name": "customerReviewAverage", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "customerReviewCount"
+        }, 
+        "name": "customerReviewCount", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "regularPrice"
+        }, 
+        "name": "regularPrice", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }, 
+    {
+        "params": {
+            "field": "salePrice"
+        }, 
+        "name": "salePrice", 
+        "store": "my_efi_feature_store", 
+        "class": "org.apache.solr.ltr.feature.FieldValueFeature"
+    }
+]

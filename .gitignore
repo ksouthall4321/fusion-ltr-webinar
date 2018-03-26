@@ -1,0 +1,10 @@
+*.bak
+*.pyc
+*.log
+.project
+*#
+#*
+.pydevproject
+.ipynb_checkpoints
+derby.log
+.python-version
